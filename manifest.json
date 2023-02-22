@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "VK Encryptor",
+	"version": "0.2",
+
+	"icons": {
+		"128": "img/logo128.png"
+	},
+
+	"content_scripts": [
+		{
+			"matches": [ "*://vk.com/*" ],
+			"js": [ "content.js" ],
+			"run_at": "document_end"
+		}
+	],
+	
+	"browser_action": {
+		"default_title": "VK Encryptor",
+		"default_icon": "img/logo128.png",
+		"default_popup": "popup.html"
+	}
+}
